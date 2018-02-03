@@ -20,6 +20,10 @@ class App extends Component {
     loadingFood: false
   }
 
+  componentWillMount() {
+    Modal.setAppElement('body');
+  }
+
   openFoodModal = ({ meal, day }) => {
     this.setState(() => ({
       foodModalOpen: true,
